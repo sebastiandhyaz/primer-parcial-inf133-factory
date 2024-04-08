@@ -7,20 +7,20 @@
 
 ![Repositorio del Primer Parcial](https://live.staticflickr.com/65535/53639722499_30d33aa30a_z.jpg)
 
-1. Si vas a trabajar en tu equipo local clona el nuevo repositorio resultado del **Fork** y abrelo con **VSCode** o el editor de tu preferencia para trabajar tu solución. También puedes trabajar tu solución en **GitHub Codespaces**.
+2. Si vas a trabajar en tu equipo local clona el nuevo repositorio resultado del **Fork** y abrelo con **VSCode** o el editor de tu preferencia para trabajar tu solución. También puedes trabajar tu solución en **GitHub Codespaces**.
 
-2. Completa tus datos personales en la siguiente tabla:
+3. Completa tus datos personales en la siguiente tabla:
     | Nombre   | Apellido   | CI   |
     | -------- | ---------- | ---- |
     | `nombre` | `apellido` | `ci` |
 
-3. Realiza un commit de esta modificación y sube los cambios a tu repositorio remoto ejecutando los siguientes comandos desde la terminal de tu equipo local o desde **GitHub Codespaces**:
+4. Realiza un commit de esta modificación y sube los cambios a tu repositorio remoto ejecutando los siguientes comandos desde la terminal de tu equipo local o desde **GitHub Codespaces**:
     ```bash
     git add .
     git commit -m "datos actualizados"
     git push origin main
     ```
-4. En la terminal ejecuta el siguiente comando para instalar las dependencias necesarias:
+5. En la terminal ejecuta el siguiente comando para instalar las dependencias necesarias:
     ```bash
     pip install -r requirements.txt
     ```
