@@ -4,7 +4,7 @@ base_url = 'http://localhost:8000/orders'
 
 orders = [
     {
-        "client": "Eduardo Valdez",
+        "client": "Eduardo Gimenez",
         "status": "Pendiente",
         "payment": "Tarjeta de Crédito",
         "shipping": 10.0,
