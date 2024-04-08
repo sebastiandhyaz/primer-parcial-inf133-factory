@@ -27,7 +27,7 @@
 
 ### Contexto:
 
-Te han contratado como **Junior Back-End Developer** en una startup de comercio electrónico que vende productos físicos y digitales. Tu primera tarea es desarrollar un **API RESTful** que permita administrar la información de las ordenes de compra de los clientes. Las ordenes tiene la siguiente información:
+Te han contratado como **Junior Back-End Developer** en una startup de comercio electrónico que vende productos físicos y digitales. Tu primera tarea es desarrollar un **API RESTful** que permita administrar la información de las órdenes de compra de los clientes. Las órdenes tiene la siguiente información:
 - **id**: Identificador único de la orden.
 - **client**: Nombre del cliente que realizó la orden.
 - **status**: Estado de la orden (Pendiente, En Proceso, Enviado, Entregado, Cancelado).
@@ -36,22 +36,23 @@ Te han contratado como **Junior Back-End Developer** en una startup de comercio 
 Solo los pedidos de tipo **Físico** tienen las siguientes propiedades adicionales:
 - **shipping**: Costo de envío.
 - **products**: Lista de productos que contiene la orden.
+
 Solo los pedidos de tipo **Digital** tienen las siguientes propiedades adicionales:
 - **code**: Código de descarga del producto digital.
 - **expiration**: Fecha de expiración del producto digital.
 
 ### Tareas:
-Construye una **API RESTful** que permita realizar las operaciones **CRUD** sobre las ordenes de compra de los clientes. La **API** debe permitir realizar las siguientes operaciones:
+Construye una **API RESTful** que permita realizar las operaciones **CRUD** sobre las órdenes de compra de los clientes. La **API** debe permitir realizar las siguientes operaciones:
 
 1. Crear una orden de compra de tipo **Física** con los siguientes productos: Camiseta, Pantalón y Zapatos.
 2. Crear una orden de compra **Digital** con el código de descarga `ABC123` y fecha de expiración `2022-12-31`.
-3. Listar todas las ordenes de compra.
+3. Listar todas las órdenes de compra.
 4. Buscar una orden de compra por su **id**.
 5. Listar todos los pedidos en estado **Pendiente**.
 6. Listar todos los pedidos de tipo **Digital** que tengan el código de descarga `ABC123`.
 7. Actualizar el estado de una orden de compra por su **id**.
 8. Eliminar una orden de compra por su **id**.
-9. Crear una orden de de tipo **Física** con los siguientes productos: Licuadora, Refrigeradora y Lavadora. 
+9. Crear una orden de tipo **Física** con los siguientes productos: Licuadora, Refrigeradora y Lavadora. 
 
 La **API RESTful** debe estar construida con el patron de diseño **FACTORY** y debe cumplir con los principios de desarrollo de Software **DRY, KISS, YAGNI y la S de SOLID**.
 
@@ -186,15 +187,14 @@ La **API RESTful** debe estar construida con el patron de diseño **FACTORY** y 
         ```
     - Resultado Esperado:
         ```json
-        {
-            "id": 1,
+        {"1":{
             "client": "Juan Perez",
             "status": "En Proceso",
             "payment": "Tarjeta de Crédito",
             "shipping": 10.0,
             "products": ["Camiseta", "Pantalón", "Zapatos"],
             "order_type": "Física"
-        }
+        }}
         ```
 8. DELETE `/orders/1`
     - Resultado Esperado:
