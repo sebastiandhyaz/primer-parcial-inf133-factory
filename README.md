@@ -47,12 +47,10 @@ Construye una **API RESTful** que permita realizar las operaciones **CRUD** sobr
 1. Crear una orden de compra de tipo **Física** con los siguientes productos: Camiseta, Pantalón y Zapatos.
 2. Crear una orden de compra **Digital** con el código de descarga `ABC123` y fecha de expiración `2022-12-31`.
 3. Listar todas las órdenes de compra.
-4. Buscar una orden de compra por su **id**.
-5. Listar todos los pedidos en estado **Pendiente**.
-6. Listar todos los pedidos de tipo **Digital** que tengan el código de descarga `ABC123`.
-7. Actualizar el estado de una orden de compra por su **id**.
-8. Eliminar una orden de compra por su **id**.
-9. Crear una orden de tipo **Física** con los siguientes productos: Licuadora, Refrigeradora y Lavadora. 
+4. Listar todos los pedidos en estado **Pendiente**.
+5. Actualizar el estado de una orden de compra por su **id**.
+6. Eliminar una orden de compra por su **id**.
+7. Crear una orden de tipo **Física** con los siguientes productos: Licuadora, Refrigeradora y Lavadora. 
 
 La **API RESTful** debe estar construida con el patron de diseño **FACTORY** y debe cumplir con los principios de desarrollo de Software **DRY, KISS, YAGNI y la S de SOLID**.
 
@@ -128,21 +126,7 @@ La **API RESTful** debe estar construida con el patron de diseño **FACTORY** y 
             }
         }
         ```
-4. GET `/orders/1`
-    - Resultado Esperado:
-        ```json
-        {
-            "1":{
-            "client": "Juan Perez",
-            "status": "Pendiente",
-            "payment": "Tarjeta de Crédito",
-            "shipping": 10.0,
-            "products": ["Camiseta", "Pantalón", "Zapatos"],
-            "order_type": "Física"
-            }
-        }
-        ```
-5. GET `/orders/?status=Pendiente`
+4. GET `/orders/?status=Pendiente`
     - Resultado Esperado:
        ```json
        {
@@ -164,21 +148,7 @@ La **API RESTful** debe estar construida con el patron de diseño **FACTORY** y 
            }
        }
        ```
-6. GET `/orders/?order_type=Digital&code=ABC123`
-    - Resultado Esperado:
-        ```json
-        {
-            "2":{
-                "client": "Maria Rodriguez",
-                "status": "Pendiente",
-                "payment": "PayPal",
-                "code": "ABC123",
-                "expiration": "2022-12-31",
-                "order_type": "Digital"
-            }
-        }
-        ```
-7. PUT `/orders/1`
+5. PUT `/orders/1`
     - Datos a enviar:
         ```json
         {
@@ -196,14 +166,14 @@ La **API RESTful** debe estar construida con el patron de diseño **FACTORY** y 
             "order_type": "Física"
         }}
         ```
-8. DELETE `/orders/1`
+6. DELETE `/orders/1`
     - Resultado Esperado:
         ```json
         {
             "message": "Orden eliminada"
         }
         ```
-9. POST `/orders`
+7. POST `/orders`
     - Datos a enviar:
         ```json
         {
@@ -226,7 +196,7 @@ La **API RESTful** debe estar construida con el patron de diseño **FACTORY** y 
             "order_type": "Física"
         }
         ```
-10. GET `/orders`
+8.  GET `/orders`
     - Resultado Esperado:
         ```json
         {
@@ -252,11 +222,13 @@ La **API RESTful** debe estar construida con el patron de diseño **FACTORY** y 
 1. La lógica de la API debe estar en el archivo `server.py` que se encuentra dentro de la carpeta `solution`.
 2. La lógica del cliente debe estar en el archivo `client.py` que se encuentra dentro de la carpeta `solution`.
 3. Una vez tengas los puntos 1 y 2 completados, realiza un commit con el mensaje "Entrega Final" y sube los cambios a tu repositorio remoto ejecutando los siguientes comandos desde la terminal de tu equipo local o desde **GitHub Codespaces**:
+
     ```bash
     git add .
     git commit -m "Entrega Final"
     git push origin main
     ```
+
 4. Una vez completado el paso anterior adjunta la **URL** de tu repositorio de **GitHub** en la tarea asignada en **Google Classroom**. 
 
 ### Restricciones:
@@ -276,4 +248,4 @@ Durante el examen solo puede consultar los siguientes recursos:
 - La **API** debe cumplir con las rutas y resultados esperados.
 - La estructura de la **API** debe estar construida con el patrón de diseño **FACTORY**.
 - La **API** debe cumplir con los principios de desarrollo de Software **DRY, KISS, YAGNI y la S de SOLID**.
-- Los ids de los personajes deben ser únicos y manejados de forma incremental correlativa.
+- Los ids de las ordenes deben ser únicos y manejados de forma incremental correlativa.
