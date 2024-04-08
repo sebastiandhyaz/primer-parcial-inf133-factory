@@ -5,22 +5,22 @@
 
 1. Realiza un **Fork** de este repositorio:
 
-![Repositorio del Primer Parcial](https://live.staticflickr.com/65535/53488416675_1431173e35_z.jpg)
+![Repositorio del Primer Parcial](https://live.staticflickr.com/65535/53639722499_30d33aa30a_z.jpg)
 
-2. Si vas a trabajar en tu equipo local clona el nuevo repositorio resultado del **Fork** y abrelo con **VSCode** o el editor de tu preferencia para trabajar tu solución. También puedes trabajar tu solución en **GitHub Codespaces**.
+1. Si vas a trabajar en tu equipo local clona el nuevo repositorio resultado del **Fork** y abrelo con **VSCode** o el editor de tu preferencia para trabajar tu solución. También puedes trabajar tu solución en **GitHub Codespaces**.
 
-3. Completa tus datos personales en la siguiente tabla:
+2. Completa tus datos personales en la siguiente tabla:
     | Nombre   | Apellido   | CI   |
     | -------- | ---------- | ---- |
     | `nombre` | `apellido` | `ci` |
 
-4. Realiza un commit de esta modificación y sube los cambios a tu repositorio remoto ejecutando los siguientes comandos desde la terminal de tu equipo local o desde **GitHub Codespaces**:
+3. Realiza un commit de esta modificación y sube los cambios a tu repositorio remoto ejecutando los siguientes comandos desde la terminal de tu equipo local o desde **GitHub Codespaces**:
     ```bash
     git add .
     git commit -m "datos actualizados"
     git push origin main
     ```
-5. En la terminal ejecuta el siguiente comando para instalar las dependencias necesarias:
+4. En la terminal ejecuta el siguiente comando para instalar las dependencias necesarias:
     ```bash
     pip install -r requirements.txt
     ```
@@ -237,6 +237,8 @@ Durante el examen solo puede consultar los siguientes recursos:
 - [Patrón de Diseño Factory](https://refactoring.guru/es/design-patterns/factory-method)
 - [Documentación Oficial de Python](https://docs.python.org/3/)
 - [Documentación de HTTP Server](https://docs.python.org/3/library/http.server.html)
+- [Documentación de la biblioteca requests](https://requests.readthedocs.io/en/latest/)
+- [Documentación del modulo urllib.parse](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.parse_qs)
 
 ### IMPORTANTE: 
 - **No** se permite el uso de frameworks como Flask, Django, FastAPI, etc.
@@ -248,4 +250,4 @@ Durante el examen solo puede consultar los siguientes recursos:
 - La **API** debe cumplir con las rutas y resultados esperados.
 - La estructura de la **API** debe estar construida con el patrón de diseño **FACTORY**.
 - La **API** debe cumplir con los principios de desarrollo de Software **DRY, KISS, YAGNI y la S de SOLID**.
-- Los ids de las ordenes deben ser únicos y manejados de forma incremental correlativa.
+- Los ids de las órdenes deben ser únicos y manejados de forma incremental correlativa.
